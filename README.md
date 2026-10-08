@@ -16,7 +16,7 @@ Keep ZAP's excellent free scanning engine. Throw away its dated Swing UI.
 ---
 
 ## Why
-
+(((not shure if it works never tested it its fully vibe coded)))
 OWASP ZAP is free, scriptable, and its scanner is genuinely competitive with
 commercial tools. What holds it back is the interface: a Swing desktop app that
 feels like 2008. Burp Suite has the better workflow but locks it behind a paid

@@ -1,0 +1,20 @@
+services:
+  zap-studio:
+    build: .
+    image: zap-studio:latest
+    ports:
+      - "8070:8070"   # ZAP Studio web UI + API
+      - "8080:8080"   # ZAP proxy — point your browser/CLI here
+      - "8090:8090"   # ZAP daemon API (optional, for power users)
+    environment:
+      BURPZAP_HOME: /data
+      BURPZAP_ZAP_HOST: 127.0.0.1
+      BURPZAP_ZAP_PORT: "8090"
+      BURPZAP_PROXY_PORT: "8080"
+      BURPZAP_AUTOSTART_ZAP: "true"
+    volumes:
+      - zap-studio-data:/data
+    restart: unless-stopped
+
+volumes:
+  zap-studio-data:
